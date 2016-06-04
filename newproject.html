@@ -1,11 +1,27 @@
 <head>
-  <title>newproject</title>
+    <title>newproject</title>
 </head>
 
 <body>
-  {{> hello}}
+{{> hello}}
 </body>
 
 <template name="hello">
     <button class="a">web to android transfer value</button>
+    <table>
+        {{#each list}}
+            {{>item}}
+        {{/each}}
+    </table>
+</template>
+
+<template name="item">
+    <tr>
+        <td>{{month}}</td>
+        <td>{{day}}</td>
+        <td>{{time}}</td>
+        <td>{{money}}</td>
+        <td>{{bank}}</td>
+        <td>{{place}}</td>
+    </tr>
 </template>

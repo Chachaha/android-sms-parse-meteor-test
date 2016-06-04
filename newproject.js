@@ -22,16 +22,16 @@ parser = function(sms){
 
 if (Meteor.isClient) {
 
+  Template.hello.helpers({
+    list : function(){
+      return Tasks.find();
+    }
+  });
+
   Template.hello.events({
     'click button.a': function () {
       // increment the counter when button is clicked
       window.smsParser.setMessage("Android");
     }
-  });
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
   });
 }
